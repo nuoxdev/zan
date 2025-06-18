@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zanzara Edit - Splash Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            background: #F5F5F5;
+            overflow-x: hidden;
+        }
+        
+        /* Interior Hero Section */
+        .interior-section {
+            min-height: 100vh;
+            position: relative;
+            background: #F5F5F5;
+        }
+        
+        .interior-image {
+            width: 100%;
+            height: 85vh;
+            background: #2a2a2a url('2.png') center/cover;
+            position: relative;
+        }
+        
+        .interior-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+        }
+        
+        .interior-logo {
+            font-size: 5rem;
+            font-weight: 300;
+            font-style: italic;
+            letter-spacing: 8px;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        }
+        
+        .interior-tagline {
+            font-size: 1rem;
+            letter-spacing: 3px;
+            opacity: 0.9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .interior-tagline span:not(:last-child)::after {
+            content: '•';
+            position: absolute;
+            margin-left: 10px;
+            color: #D4AF37;
+        }
+        
+        /* Amenities Bar - Right after hero image */
+        .amenities {
+            background: #FFFFFF;
+            color: #1a1a1a;
+            padding: 30px 0;
+        }
+        
+        .amenities-list {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            font-size: 0.875rem;
+            letter-spacing: 1px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .amenity-item {
+            position: relative;
+            padding: 0 15px;
+        }
+        
+        .amenity-item:not(:last-child)::after {
+            content: '•';
+            position: absolute;
+            right: -18px;
+            color: #D4AF37;
+        }
+        
+        /* Launching Soon Section */
+        .launching-section {
+            min-height: 100vh;
+            background: #F5F5F5;
+            padding: 80px 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        
+        .left-content {
+            max-width: 500px;
+        }
+        
+        .launching-soon {
+            font-size: 4.5rem;
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: -2px;
+            margin-bottom: 30px;
+        }
+        
+        .follow-journey {
+            font-size: 1.125rem;
+            letter-spacing: 3px;
+            margin-bottom: 40px;
+            color: #666;
+        }
+        
+        .description {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 50px;
+        }
+        
+        .stay-tuned {
+            font-size: 1.125rem;
+            letter-spacing: 3px;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+        
+        .contact-info {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.125rem;
+            color: #333;
+        }
+        
+        .contact-info svg {
+            width: 24px;
+            height: 24px;
+        }
+        
+        .portrait-section {
+            position: relative;
+            height: 600px;
+        }
+        
+        .portrait-image {
+            width: 100%;
+            height: 100%;
+            background: url('1.png') center/cover;
+            background-position: center top;
+            border-radius: 10px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+        }
+        
+        @media (max-width: 968px) {
+            .main-content {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+            
+            .launching-soon {
+                font-size: 3rem;
+            }
+            
+            .portrait-section {
+                height: 500px;
+            }
+            
+            .interior-logo {
+                font-size: 3.5rem;
+            }
+            
+            .interior-image {
+                height: 70vh;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .interior-logo {
+                font-size: 2.5rem;
+                letter-spacing: 4px;
+            }
+            
+            .interior-tagline {
+                font-size: 0.875rem;
+            }
+            
+            .launching-soon {
+                font-size: 2.5rem;
+            }
+            
+            .amenities-list {
+                gap: 15px;
+            }
+            
+            .amenity-item {
+                padding: 0 8px;
+                font-size: 0.75rem;
+            }
+            
+            .amenity-item:not(:last-child)::after {
+                right: -12px;
+            }
+            
+            .interior-image {
+                height: 60vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Interior Hero Section with Amenities -->
+    <section class="interior-section">
+        <div class="interior-image">
+            <div class="interior-overlay">
+                <h1 class="interior-logo">Zanzara Edit</h1>
+                <div class="interior-tagline">
+                    <span>ZANZARA PRIVATE COLLECTION</span>
+                    <span>STONE TOWN</span>
+                    <span>ZANZIBAR</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Amenities Bar - Right below hero image -->
+        <div class="amenities">
+            <div class="amenities-list">
+                <span class="amenity-item">3 BEDROOM ON-SUITE</span>
+                <span class="amenity-item">ROOF TOP</span>
+                <span class="amenity-item">BBQ AREA</span>
+                <span class="amenity-item">PRIVATE BAR</span>
+                <span class="amenity-item">JACUZZI</span>
+                <span class="amenity-item">BREAKFAST</span>
+                <span class="amenity-item">SEA FOOD BBQ</span>
+                <span class="amenity-item">MOMENTS MANAGER</span>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Launching Soon Section -->
+    <section class="launching-section">
+        <div class="container">
+            <div class="main-content">
+                <div class="left-content">
+                    <h2 class="launching-soon">LAUNCHING<br>SOON</h2>
+                    <p class="follow-journey">FOLLOW THE JOURNEY</p>
+                    <p class="description">
+                        Zanzara Edit is a boutique residence in the heart of Stone Town, 
+                        where Zanzibar's heritage meets modern design. Our 
+                        thoughtfully styled 3-bedroom home offers a serene, luxury 
+                        escape for those who seek beauty, comfort, and cultural depth.
+                    </p>
+                    <p class="stay-tuned">STAY TUNED</p>
+                    <div class="contact-info">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                        <span>+255 761 800 002</span>
+                    </div>
+                    <div class="contact-info">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                        <span>info@zanzaraedit.com</span>
+                    </div>
+                </div>
+                
+                <div class="portrait-section">
+                    <div class="portrait-image"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
