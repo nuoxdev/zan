@@ -1,0 +1,3 @@
+#!/bin/bash
+# Simple deployment for static HTML
+echo "Deploying static files..."
